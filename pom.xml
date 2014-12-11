@@ -7,6 +7,7 @@
 	<name>s8</name>
 	<packaging>war</packaging>
 	<version>1.0.0</version>
+
 	<properties>
 		<java-version>1.6</java-version>
 		<org.springframework-version>3.1.1.RELEASE</org.springframework-version>
@@ -26,11 +27,11 @@
 		<org.cloudfoundry-group>org.cloudfoundry</org.cloudfoundry-group>
 	</properties>
 	<dependencies>
-		<dependency>
+		<!--  <dependency>
 			<groupId>org.cloudfoundry</groupId>
 			<artifactId>cloudfoundry-runtime</artifactId>
 			<version>${org.cloudfoundry-version}</version>
-		</dependency>
+		</dependency>-->
 		<dependency>
 			<groupId>javax.mail</groupId>
 			<artifactId>mail</artifactId>
@@ -338,6 +339,20 @@
 			</snapshots>
 		</repository>
 
+		<repository>
+			<id>com.springsource.repository.bundles.release</id>
+			<name>Spring Maven Repository Repository</name>
+			<url>http://repository.springsource.com/maven/bundles/release</url>
+		</repository>
+		<repository>
+			<id>oschina</id>
+			<url>http://maven.oschina.net/content/groups/public/</url>
+		</repository>
+		<repository>
+			<id>sonatype</id>
+			<name>Sonatype Repository</name>
+			<url>http://repository.sonatype.org/content/groups/public/</url>
+		</repository>
 		<!-- additional repository declarations -->
 	</repositories>
 </project>
