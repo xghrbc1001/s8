@@ -12,7 +12,8 @@
 
 	<mvc:default-servlet-handler />
 
-	<context:component-scan base-package="org.nedesona" />
+	<!-- <context:component-scan base-package="org.nedesona" />-->
+	<context:component-scan base-package="com.xghrbc1001" />
 
 
 
@@ -54,6 +55,7 @@
 		<property name="exposeSpringMacroHelpers" value="true" />
 		<property name="exposeRequestAttributes" value="true" />
 		<property name="exposeSessionAttributes" value="true" />
+		 <property name="contentType" value="text/html;charset=utf-8"/> 
 	</bean>
 
 </beans>

@@ -1,7 +1,7 @@
 <img href="#" src="${rc.getContextPath()}/resources/img/logo2.png" style="left: 90px; position: absolute; top: -6px;">
 <div class="navbar navbar navbar-static-top">
             <div class="navbar-inner">
-                <div class="container"><a href="#" class="brand" style="">Cloud Bookmark</a>
+                <div class="container"><a href="#" class="brand" style="">S8</a>
 					<button data-target=".nav-collapse" data-toggle="collapse" class="btn btn-navbar" type="button">
 			            <span class="icon-bar"></span>
 			            <span class="icon-bar"></span>
@@ -10,17 +10,37 @@
 			         <div class="nav-collapse collapse">
 			           <ul class="nav" style="padding-left:150px;">
 			              <li>
-			                <a href="${rc.getContextPath()}/">Home</a>
+			                <a href="${rc.getContextPath()}/">首页</a>
 			              </li>
 			              <li class="">
-			                <a href="${rc.getContextPath()}/addPost">About Us</a>
+			                <a href="${rc.getContextPath()}/addPost">风口</a>
 			              </li>
-			              <li class="">
-			                <a href="${rc.getContextPath()}/addPost">Contact Us</a>
+			              <li>
+			                <a href="${rc.getContextPath()}/addPost">数据</a>
 			              </li>
-			              <li class="">
-			                <a href="${rc.getContextPath()}/addPost">Help ?</a>
-			              </li>
+			              <li class="dropdown">
+              					<a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">工具<b class="caret"></b></a>
+				                <ul class="dropdown-menu">
+				                    <li>
+					                  <a href="http://www.sse.com.cn/" target="_blank">上交所</a>
+					                </li>
+					                <li>
+					                  <a href="http://www.sse.com.cn/disclosure/listedinfo/credibility/change/" target="_blank">(沪)高管股份变动</a>
+					                </li>
+					                <li>
+					                  <a href="http://www.sse.com.cn/market/dealingdata/overview/margin/" target="_blank">(沪)融资融券</a>
+					                </li>
+					                <li>
+					                  <a href="http://www.szse.cn/" target="_blank">深交所</a>
+					                </li>
+					                 <li>
+					                  <a href="http://www.szse.cn/main/disclosure/jgxxgk/djggfbd/" target="_blank">(深)高管股份变动</a>
+					                </li>
+					                  <li>
+					                  <a href="http://www.szse.cn/main/disclosure/rzrqxx/rzrqjy/" target="_blank">(深)融资融券</a>
+					                </li>
+				                </ul>
+				          </li>
 			            </ul>
 			            
 			            <#if !loggedInUser?exists>
