@@ -13,7 +13,25 @@
 			                <a href="${rc.getContextPath()}/">首页</a>
 			              </li>
 			              <li class="">
+			                <a href="${rc.getContextPath()}/addPost">投资日历</a>
+			              </li>
+			              <li class="">
+			                <a href="${rc.getContextPath()}/addPost">龙头低吸</a>
+			              </li>
+			              <li class="">
 			                <a href="${rc.getContextPath()}/addPost">风口</a>
+			              </li>
+			              <li class="">
+			                <a href="${rc.getContextPath()}/addPost">异动</a>
+			              </li>
+			              <li class="">
+			                <a href="${rc.getContextPath()}/addPost">每日涨停</a>
+			              </li>
+			              <li class="">
+			                <a href="${rc.getContextPath()}/addPost">看新闻买股票</a>
+			              </li>
+			              <li class="">
+			                <a href="${rc.getContextPath()}/addPost">书籍</a>
 			              </li>
 			              <li>
 			                <a href="${rc.getContextPath()}/addPost">数据</a>
@@ -36,8 +54,11 @@
 					                 <li>
 					                  <a href="http://www.szse.cn/main/disclosure/jgxxgk/djggfbd/" target="_blank">(深)高管股份变动</a>
 					                </li>
-					                  <li>
+					                <li>
 					                  <a href="http://www.szse.cn/main/disclosure/rzrqxx/rzrqjy/" target="_blank">(深)融资融券</a>
+					                </li>
+					                <li>
+					                  <a href="http://www.szse.cn/main/disclosure/rzrqxx/rzrqjy/" target="_blank">新股</a>
 					                </li>
 				                </ul>
 				          </li>

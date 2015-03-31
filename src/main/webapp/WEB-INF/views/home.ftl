@@ -1,26 +1,292 @@
 <#import "/spring.ftl" as spring />
 <#import "macro.ftl" as macro/>
 <@macro.showHeader />
-<div class="row-fluid inner-col" ng-controller="HomeCtrl">
-	<div class="span12">				
-			<h3>Bookmarks</h3>
-			Save, Share, and Recall anything that you find online. Safely store and organize your browser bookmarks and favorites online so you can access them anytime - anywhere. Save all your favorites in one secure online location and protect them from computer crashes and viruses. Share your favorites with anybody or keep them private. You are in full control of your data.
-			<ul>
-				<li>Store and organize your favorites online </li>
-				<li>Easily share favorites with others</li>
-				<li>Access Anytime - Anywhere</li>
-				<li>Add your notes and descriptions</li>
-			</ul>
-		</div>
+<style>
+.fl{
+float:right;
+}
+</style>
+<div class="row-fluid inner-col" id="bankuai">
 
-		<div class="features-storage-text">
-		<h3>Powerful Bookmark Management</h3>
-		<div>Favorites, or bookmarks, can be extremely useful in providing quick and easy access to web sites you visit regularly, or web sites where the web address cannot easily be remembered. The common problem is that you may have several sets of you favorites: one at work, another one at home, and another set on your laptop. It can be very frustrating when you need to recall bookmarks saved on your work computer from home. With <i>Online Bookmark</i> you can manage all your favorites in one convenient and secure online location, and assess them whenever you need them (whether that's at work, at home, friend's house, or anywhere else).</div>
-		<h3>Save your Research</h3>
-		<div>Doing a research on something? <i>Online Bookmark</i> can help you organize everything that you'll find online. Create your own favorite sites category, and add related links with custom titles, descriptions, comments for everything that you'll find.</div>
-		</div>
-							
-	</div>
+<!--
+		<div class="span3">
+          <div class="thumbnail">
+            <h2 style="color:red">券商</h2>
+            <div class="caption">
+            	<table class="table  table-striped">
+            		<thead>
+            			<tr >
+            				<th>名称</th>
+            				<th>现价</th>
+            				<th>涨幅</th>
+            			</tr>
+            		</thead>
+            		<tbody>
+            			<tr style="color:red">
+            				<td>中信证券</td>
+            				<td>20.30</td>
+            				<td>2.5%</td>
+            			</tr>
+            			<tr style="color:red">
+            				<td>中信证券</td>
+            				<td>20.30</td>
+            				<td>2.5%</td>
+            			</tr>
+            			<tr style="color:red">
+            				<td>中信证券</td>
+            				<td>20.30</td>
+            				<td>2.5%</td>
+            			</tr>
+            			<tr style="color:red">
+            				<td>中信证券</td>
+            				<td>20.30</td>
+            				<td>2.5%</td>
+            			</tr>
+            			<tr style="color:red">
+            				<td>中信证券</td>
+            				<td>20.30</td>
+            				<td>2.5%</td>
+            			</tr>
+            			<tr style="color:green">
+            				<td>国金证券</td>
+            				<td>20.30</td>
+            				<td>-2.5%</td>
+            			</tr>
+            		</tbody>
+            	</table>
+            </div>
+          </div>
+        </div>
+        
+        <div class="span3">
+          <div class="thumbnail">
+            <h2 style="color:green">券商</h2>
+            <div class="caption">
+            	<table class="table  table-striped">
+            		<thead>
+            			<tr>
+            				<th>代码</th>
+            				<th>名称</th>
+            				<th>价格</th>
+            				<th>涨幅</th>
+            			</tr>
+            		</thead>
+            		<tbody>
+            			<tr>
+            				<td>600739</td>
+            				<td>中信证券</td>
+            				<td>2.5%</td>
+            				<td>20.30</td>
+            			</tr>
+            			<tr>
+            				<td>600739</td>
+            				<td>国金证券</td>
+            				<td>2.5%</td>
+            				<td>20.30</td>
+            			</tr>
+            			<tr>
+            				<td>600739</td>
+            				<td>国金证券</td>
+            				<td>2.5%</td>
+            				<td>20.30</td>
+            			</tr>
+            		</tbody>
+            	</table>
+            </div>
+          </div>
+        </div>
+        
+        <div class="span3">
+          <div class="thumbnail">
+            <h2>券商</h2>
+            <div class="caption">
+            	<table class="table  table-striped">
+            		<thead>
+            			<tr>
+            				<th>代码</th>
+            				<th>名称</th>
+            				<th>价格</th>
+            				<th>涨幅</th>
+            			</tr>
+            		</thead>
+            		<tbody>
+            			<tr>
+            				<td>600739</td>
+            				<td>中信证券</td>
+            				<td>2.5%</td>
+            				<td>20.30</td>
+            			</tr>
+            			<tr>
+            				<td>600739</td>
+            				<td>国金证券</td>
+            				<td>2.5%</td>
+            				<td>20.30</td>
+            			</tr>
+            			<tr>
+            				<td>600739</td>
+            				<td>国金证券</td>
+            				<td>2.5%</td>
+            				<td>20.30</td>
+            			</tr>
+            		</tbody>
+            	</table>
+            </div>
+          </div>
+        </div>
+        
+        <div class="span3">
+          <div class="thumbnail">
+            <h2>券商</h2>
+            <div class="caption">
+            	<table class="table  table-striped">
+            		<thead>
+            			<tr>
+            				<th>代码</th>
+            				<th>名称</th>
+            				<th>价格</th>
+            				<th>涨幅</th>
+            			</tr>
+            		</thead>
+            		<tbody>
+            			<tr>
+            				<td>600739</td>
+            				<td>中信证券</td>
+            				<td>2.5%</td>
+            				<td>20.30</td>
+            			</tr>
+            			<tr>
+            				<td>600739</td>
+            				<td>国金证券</td>
+            				<td>2.5%</td>
+            				<td>20.30</td>
+            			</tr>
+            			<tr>
+            				<td>600739</td>
+            				<td>国金证券</td>
+            				<td>2.5%</td>
+            				<td>20.30</td>
+            			</tr>
+            		</tbody>
+            	</table>
+            </div>
+          </div>
+        </div>
+        
+        <div class="span3">
+          <div class="thumbnail">
+            <h2>券商</h2>
+            <div class="caption">
+            	<table class="table  table-striped">
+            		<thead>
+            			<tr>
+            				<th>代码</th>
+            				<th>名称</th>
+            				<th>价格</th>
+            				<th>涨幅</th>
+            			</tr>
+            		</thead>
+            		<tbody>
+            			<tr>
+            				<td>600739</td>
+            				<td>中信证券</td>
+            				<td>2.5%</td>
+            				<td>20.30</td>
+            			</tr>
+            			<tr>
+            				<td>600739</td>
+            				<td>国金证券</td>
+            				<td>2.5%</td>
+            				<td>20.30</td>
+            			</tr>
+            			<tr>
+            				<td>600739</td>
+            				<td>国金证券</td>
+            				<td>2.5%</td>
+            				<td>20.30</td>
+            			</tr>
+            		</tbody>
+            	</table>
+            </div>
+          </div>
+        </div>
+        
+        <div class="span3">
+          <div class="thumbnail">
+            <h2>券商</h2>
+            <div class="caption">
+            	<table class="table  table-striped">
+            		<thead>
+            			<tr>
+            				<th>代码</th>
+            				<th>名称</th>
+            				<th>价格</th>
+            				<th>涨幅</th>
+            			</tr>
+            		</thead>
+            		<tbody>
+            			<tr>
+            				<td>600739</td>
+            				<td>中信证券</td>
+            				<td>2.5%</td>
+            				<td>20.30</td>
+            			</tr>
+            			<tr>
+            				<td>600739</td>
+            				<td>国金证券</td>
+            				<td>2.5%</td>
+            				<td>20.30</td>
+            			</tr>
+            			<tr>
+            				<td>600739</td>
+            				<td>国金证券</td>
+            				<td>2.5%</td>
+            				<td>20.30</td>
+            			</tr>
+            		</tbody>
+            	</table>
+            </div>
+          </div>
+        </div>
+        
+        <div class="span3">
+          <div class="thumbnail">
+            <h2>券商</h2>
+            <div class="caption">
+            	<table class="table  table-striped">
+            		<thead>
+            			<tr>
+            				<th>代码</th>
+            				<th>名称</th>
+            				<th>价格</th>
+            				<th>涨幅</th>
+            			</tr>
+            		</thead>
+            		<tbody>
+            			<tr>
+            				<td>600739</td>
+            				<td>中信证券</td>
+            				<td>2.5%</td>
+            				<td>20.30</td>
+            			</tr>
+            			<tr>
+            				<td>600739</td>
+            				<td>国金证券</td>
+            				<td>2.5%</td>
+            				<td>20.30</td>
+            			</tr>
+            			<tr>
+            				<td>600739</td>
+            				<td>国金证券</td>
+            				<td>2.5%</td>
+            				<td>20.30</td>
+            			</tr>
+            		</tbody>
+            	</table>
+            </div>
+          </div>
+        </div>
+        
+		-->
 	
 </div>
 <@macro.showFooter>

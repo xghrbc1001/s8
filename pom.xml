@@ -27,11 +27,8 @@
 		<org.cloudfoundry-group>org.cloudfoundry</org.cloudfoundry-group>
 	</properties>
 	<dependencies>
-		<!--  <dependency>
-			<groupId>org.cloudfoundry</groupId>
-			<artifactId>cloudfoundry-runtime</artifactId>
-			<version>${org.cloudfoundry-version}</version>
-		</dependency>-->
+		<!-- <dependency> <groupId>org.cloudfoundry</groupId> <artifactId>cloudfoundry-runtime</artifactId> 
+			<version>${org.cloudfoundry-version}</version> </dependency> -->
 		<dependency>
 			<groupId>javax.mail</groupId>
 			<artifactId>mail</artifactId>
@@ -290,6 +287,29 @@
 			<version>1.1.1.RELEASE</version>
 		</dependency>
 
+		<!-- http -->
+		<dependency>
+			<groupId>org.apache.httpcomponents</groupId>
+			<artifactId>httpclient</artifactId>
+			<version>4.2.3</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.httpcomponents</groupId>
+			<artifactId>httpclient-cache</artifactId>
+			<version>4.2.3</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.httpcomponents</groupId>
+			<artifactId>httpmime</artifactId>
+			<version>4.2.3</version>
+		</dependency>
+
+		<!-- gson -->
+		<dependency>
+			<groupId>com.google.code.gson</groupId>
+			<artifactId>gson</artifactId>
+			<version>2.2.2</version>
+		</dependency>
 	</dependencies>
 	<build>
 		<plugins>
