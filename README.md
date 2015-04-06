@@ -30,3 +30,5 @@
 # 组合异动
 #　尾盘战法
 买入不涨不跌的股,或微涨的股,相对于指数
+
+http://maven.oschina.net/help.html

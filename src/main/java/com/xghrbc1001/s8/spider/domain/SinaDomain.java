@@ -2,6 +2,7 @@ package com.xghrbc1001.s8.spider.domain;
 
 import java.io.Serializable;
 import java.math.BigDecimal;
+import java.text.DecimalFormat;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
@@ -25,11 +26,13 @@ import java.util.List;
  * 20：”3100″，“卖一”申报3100股，即31手； 21：”26.92″，“卖一”报价 (22, 23), (24, 25),
  * (26,27), (28, 29)分别为“卖二”至“卖四的情况” 30：”2008-01-11″，日期； 31：”15:05:32″，时间；
  */
-public class SinaDomain implements Serializable {
+public class SinaDomain implements Serializable,Comparable<SinaDomain> {
 
 	private static final long serialVersionUID = -5098235959564218739L;
 
 	private static final SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd HH:ss:MM");
+	
+	private static final DecimalFormat df=new DecimalFormat("#.00");
 
 	private String id;
 
@@ -97,6 +100,8 @@ public class SinaDomain implements Serializable {
 	
 	// 涨跌幅
 	private Double percentage;
+	
+	private String percentageShow;
 
 	public String getId() {
 		return id;
@@ -363,6 +368,14 @@ public class SinaDomain implements Serializable {
 		this.percentage = percentage;
 	}
 
+	public String getPercentageShow() {
+		return df.format(percentage)+"%";
+	}
+
+	public void setPercentageShow(String percentageShow) {
+		this.percentageShow = percentageShow;
+	}
+
 	@Override
 	public String toString() {
 		return "SinaDomain [代码=" + id + ", 名称=" + name + ", 开盘价=" + openingPrice + ", 收盘价=" + closingPrice + ", 当前价=" + currentPrice
@@ -456,4 +469,16 @@ public class SinaDomain implements Serializable {
 		   num = bd.setScale(2, BigDecimal.ROUND_HALF_UP).doubleValue();
 		   return num;
 		 }
+
+	@Override
+	public int compareTo(SinaDomain sinaDomain) {
+		if(this.percentage == sinaDomain.percentage){
+			return 0;
+		}
+		if(this.percentage < sinaDomain.percentage){
+			return 1;
+		}else{
+			return -1;
+		}
+	}
 }

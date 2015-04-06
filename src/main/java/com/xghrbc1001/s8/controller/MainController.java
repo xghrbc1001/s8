@@ -3,6 +3,7 @@ package com.xghrbc1001.s8.controller;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Enumeration;
 import java.util.HashMap;
 import java.util.List;
@@ -89,13 +90,16 @@ public class MainController {
 				String key=(String)keys.nextElement();
 				String stocks=(String) bankuaiProperties.get(key);
 				List<SinaDomain> bankuaiDomains=new ArrayList<SinaDomain>();
-				if(stocks!=null || !stocks.isEmpty()){
+				if(stocks!=null && !stocks.isEmpty()){
 					String[] codes=stocks.split(",");
 					for(String code: codes){
 						bankuaiDomains.add(hmStocks.get(code));
 					}
 				}
-				bankuais.put(key, sinaDomains);
+				if(bankuaiDomains!=null && !bankuaiDomains.isEmpty()){
+					Collections.sort(bankuaiDomains);
+					bankuais.put(key,bankuaiDomains);
+				}
 			}
 			
 		}catch(Exception ex){

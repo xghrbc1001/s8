@@ -4,7 +4,7 @@ var bankuai= function() {$.get("./bankuai", {
 }, function(data, textStatus) {
 	// 遍历json数组
 	$.each(data,function(key,values) {
-		html="";
+	    console.log("abc:"+key);
 		html+="<div class=\"span3 fl\">"+
         "<div class=\"thumbnail\">"+
           "<h2>"+key+"</h2>"+
@@ -19,10 +19,7 @@ var bankuai= function() {$.get("./bankuai", {
           		"</thead>"+
           		"<tbody>";
           			
-     
-      
-		$.each(values,function(i,val){
-			console.log(val.buy1Price);
+		$.each(values,function(i,val){	
 			percentage=val.percentage;
 			if(percentage >=0){
 				html+="<tr style=\"color:red\">";
@@ -31,16 +28,16 @@ var bankuai= function() {$.get("./bankuai", {
 			}
 				html+="<td>"+val.name+"</td>"+
 				"<td>"+val.currentPrice+"</td>"+
-				"<td>"+val.percentage+"</td>"+
+				"<td>"+val.percentageShow+"</td>"+
 			"</tr>";
 		});
-		html+="   <tbody></table></div></div></div>";
+		html+="   </tbody></table></div></div></div>";
 	});
 	
-	console.log(html);
 	$("#bankuai").html(html);
 });
 }
 
-setInterval("bankuai()", 1000);
+//setInterval("bankuai()", 10000);
+bankuai();
 
